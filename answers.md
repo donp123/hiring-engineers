@@ -8,7 +8,7 @@ In order to properly complete the Datadog Sales Engineering Lab I first had to c
 ## Collecting Metrics 
 
 
-
+![Hostmap](https://github.com/donp123/donp123/blob/master/hostmap.png)
 
 
 
