@@ -7,9 +7,18 @@ From here I ran the following two commands in order to have a fully running virt
 
 ![Hostmap](https://github.com/donp123/donp123/blob/master/vagrantup.png)
 
-I then signed up for a trial with Datadog using  “Datadog Recruiting Candidate” in the “Company” field, and proceeded to download the appropriate Agent for linux. I used the following command for the Datadog 7 installation onto my VM:
+I then ran the command in order to ssh into the VM from my terminal:
+
+$ Vagrant ssh 
+
+From here I then signed up for a trial with Datadog using  “Datadog Recruiting Candidate” in the “Company” field, and proceeded to download the appropriate Agent for linux. I used the following command for the Datadog 7 installation onto my VM:
 
 DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=f622b4c53cca8fc2fd7e0f74c02e302b bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh)"
+
+Once I ran the above command, I then went into Datadog to see my agent properly connected  by looking at my system dashboard:
+
+![System Dash](https://github.com/donp123/donp123/blob/master/pic1_aftersetup.png)
+
 
 
 
