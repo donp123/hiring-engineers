@@ -140,6 +140,12 @@ The following were the tasks given for completion of the Visualizing Data sectio
   - Any metric from the Integration on your Database with the anomaly function applied.
   - Your custom metric with the rollup function applied to sum up all the points for the past hour into one bucket
 
+I used the Datadog API using curl in order to create a Timeboard called "DPs first Dashboard":
+
+![timeboardapi](https://github.com/donp123/donp123/blob/master/timeboardcode.png)
+
+
+
 ## Monitoring Data
 
 
