@@ -284,13 +284,9 @@ Services act as building blocks for microservice architectures, such as a MySQL 
 ## Final Question
 Datadog has been used in a lot of creative ways in the past. We’ve written some blog posts about using Datadog to monitor the NYC Subway System, Pokemon Go, and even office restroom availability!
 
-Is there anything creative you would use Datadog for
+Is there anything creative you would use Datadog for?
 
-
-
-
-
-
+I believe an interesting way that I could personally use Datadog for is to monitor the consumption of pre-made food I ingest on a weekly basis. I try prepair my meals on Sunday in big batches so I do not have to cook throughout the week for lunch and dinner. I have noticed that some weeks I run out of food, while other weeks I have excess food (I am fairly consistent on how much food I buy each week and I hate wasting food!) The goal here would be able to correlate my workouts/daily behavior with food consumtion to optomize the food preperation process. This would allow me to predict how much food I need for an upcoming week based on planned workout/daily activities. I figured this could be achieveable by monitoring the weight of my refrigerator shelf and importing this into Datadog for monitoring, as well as cross referencing this data with my workouts/daily activities. I could create thresholds and alerts to let me know if I need to buy more food during the week as well if I update my workout routine. 
 
 
 
