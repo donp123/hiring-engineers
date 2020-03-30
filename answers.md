@@ -207,6 +207,9 @@ Below is the full monitor message:
 
 ![definemetricmessagefull](https://github.com/donp123/donp123/blob/master/messagecode.png)
 
+Once the Metric Monitor has been fully filled out, I then ran a test to see what the alert would look like for an alert notification:
+
+![definemetricmessagefull](https://github.com/donp123/donp123/blob/master/testmonitor.png)
 
 
 
