@@ -32,7 +32,7 @@ The following were the tasks given for completion of the Collecting Metrics sect
 
 In order to complete this task, I first had to edit the datadog.yaml by running the following command:
   
-$ sudo vi /etc/datadog-agent/datadog.yaml
+  - $ sudo vi /etc/datadog-agent/datadog.yaml
 
 Once inside the file file I was able to add in tags for my agent:
   
@@ -67,15 +67,17 @@ mysql> CREATE USER 'datadog'@'localhost' IDENTIFIED BY 'password';
 I then granted the user proper permissions:
   
   mysql> GRANT REPLICATION CLIENT ON *.* TO 'datadog'@'localhost' WITH MAX_USER_CONNECTIONS 5;
+  
   Query OK, 0 rows affected, 1 warning (0.00 sec)
 
   mysql> GRANT PROCESS ON *.* TO 'datadog'@'localhost';
+  
   Query OK, 0 rows affected (0.00 sec)
   
   
 I then had to add the proper configuration block to my conf.yaml file to collect the MySQL metrics:
  
-   $ vi /etc/datadog-agent/conf.d/mysql.d/conf.yaml
+  - $ vi /etc/datadog-agent/conf.d/mysql.d/conf.yaml
  
 From here I added the following code to the file:
   
@@ -83,7 +85,7 @@ From here I added the following code to the file:
   
 I then restarted the Datadog agent:
   
-  $ systemct1 restart datadog-agent
+  - $ systemct1 restart datadog-agent
   
   
 I now went into the Datadog UI and saw that a new dashboard was added called "MySQL Overview":
@@ -99,7 +101,7 @@ This dashbaord is showing that my agent is correctly setup and is now collecting
 In order to complete this task, I first had to create a metric check python file. I called this file
 my-metric-check.py:
   
-  $ sudo vi /etc/datadog-agent/checks.d/my-metric-check.py
+  - $ sudo vi /etc/datadog-agent/checks.d/my-metric-check.py
    
 I then added the following code into the python file:
   
@@ -108,7 +110,7 @@ I then added the following code into the python file:
   
 I then had to create a check Yaml file that also had the same name has my check Python file:
   
-  $ sudo vi /etc/datadog-agent/conf.d/my-metric-check.yaml
+  - $ sudo vi /etc/datadog-agent/conf.d/my-metric-check.yaml
   
 I then added the following to this file as directed by the Datadog doc file (https://docs.datadoghq.com/developers/write_agent_check/?tab=agentv6v7) :
   
@@ -267,7 +269,7 @@ In order to complete this section of the lab I first had to install python pip, 
 
 I also installed flask using pip:
 
-  $ sudo pip install flask
+ -  $ sudo pip install flask
   
 After installing pip, ddtrace, and flask I then created a flask.py file with the given APM code above to run my flask application. After creating my dpflask.py file I ran the following command to launch the application using Datadog tracing:
 
