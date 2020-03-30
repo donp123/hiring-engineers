@@ -112,10 +112,12 @@ The following were the tasks given for completion of the Collecting Metrics sect
   ![mymetriccheck](https://github.com/donp123/donp123/blob/master/metriccheck.png)
   
   
-  
+### 3.)Change your check's collection interval so that it only submits the metric once every 45 seconds
 
   
 
+  
+![intervalchange](https://github.com/donp123/donp123/blob/master/collectionintchangedoc.png)
 
 
 
