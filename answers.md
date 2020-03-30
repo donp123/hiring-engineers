@@ -219,6 +219,18 @@ After I was satisifed with the test results, I clicked "save" and my Metric Moni
 
 ![metricalertlive](https://github.com/donp123/donp123/blob/master/liveemailtest.png)
 
+### Bonus Question: Since this monitor is going to alert pretty often, you don’t want to be alerted when you are out of the office. Set up two scheduled downtimes for this monitor:
+  - One that silences it from 7pm to 9am daily on M-F,
+  - And one that silences it all day on Sat-Sun.
+  - Make sure that your email is notified when you schedule the downtime and take a screenshot of that notification.
+
+In order to Schedule Down time for a monitor:
+
+Monitors->Manage Downtime->Schedule Downtime
+
+
+
+
 ## Collecting APM Data
 Given the following Flask app (or any Python/Ruby/Go app of your choice) instrument this using Datadog’s APM solution:
 
