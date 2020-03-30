@@ -211,7 +211,13 @@ Once the Metric Monitor has been fully filled out, I then ran a test to see what
 
 ![definemetricmessagefull](https://github.com/donp123/donp123/blob/master/testmonitor.png)
 
+Below is the test email alert notification I recieved:
 
+![metricalerttest](https://github.com/donp123/donp123/blob/master/testresultemail.png)
+
+After I was satisifed with the test results, I clicked "save" and my Metric Monitor was live. Below is the first live email warning notifcation when "my_metric" was greater than 500 on average during the last 5 minutes:
+
+![metricalertlive](https://github.com/donp123/donp123/blob/master/liveemailtest.png)
 
 ## Collecting APM Data
 Given the following Flask app (or any Python/Ruby/Go app of your choice) instrument this using Datadog’s APM solution:
