@@ -125,6 +125,11 @@ From here I restarted the Datadog agent, and then went into Datadog to find my c
 
 ![mymetricdash](https://github.com/donp123/donp123/blob/master/metricsexplorerinterval.png)
 
+The dashboard confirmed that the colection interval for my metric has been changed to 45 seconds.
+
+### Bonus Question:  Can you change the collection interval without modifying the Python check file you created?
+
+Yes you would just need to go into the configuration file and change the minimum collection interval as we just did to be 45 seconds from 15. There was no change needed to my check python file.
 
 ## Visualizing Data
 
