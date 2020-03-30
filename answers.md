@@ -185,7 +185,7 @@ The following were the tasks given for completion of the Monitoring Data section
   - Alerting threshold of 800
   - And also ensure that it will notify you if there is No Data for this query over the past 10m.
   
-
+From the left hand navigation, 
 
 
 ## Collecting APM Data
