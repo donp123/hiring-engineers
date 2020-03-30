@@ -75,6 +75,14 @@ The following were the tasks given for completion of the Collecting Metrics sect
   
   ![yaml](https://github.com/donp123/donp123/blob/master/confyam.png)
   
+  I then restarted the Datadog agent:
+  
+  $ systemct1 restart datadog-agent
+  
+  
+  I now went into the Datadog UI and saw that a new dashboard was added called "MySQL Overview":
+  
+  ![mysqldash](https://github.com/donp123/donp123/blob/master/mysql.png)
   
   
    
