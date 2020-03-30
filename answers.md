@@ -259,21 +259,20 @@ I also installed flask using pip:
 
   $ sudo pip install flask
   
-After installing pip, ddtrace, and flask I then created a flask.py file with the given code above to run my flask application. After creating my dpflask.py file I ran the following command to launch the application using Datadog tracing:
+After installing pip, ddtrace, and flask I then created a flask.py file with the given APM code above to run my flask application. After creating my dpflask.py file I ran the following command to launch the application using Datadog tracing:
 
+![ddtrace](https://github.com/donp123/donp123/blob/master/flasky.png)
 
-
-test curl
+I then ran the curl command below to test the application 
 
 ![pip1](https://github.com/donp123/donp123/blob/master/testcurlapm.png)
 
 
-
-
-After running the curl command above, a new service is present in my APM section of Data dog and the following dashboard for my flask aplication is visbale:
+After running the curl command above, a new service is present in my APM section of Datadog and the following dashboard for my flask application is visable:
 
 ![flaskdashboard](https://github.com/donp123/donp123/blob/master/flaskapmdashboard.png)
 
+Dashboard link: https://app.datadoghq.com/apm/service/flask/flask.request?end=1585342678914&env=dev&maxPercentile=100&paused=false&start=1585339078914
 
 
 
