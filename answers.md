@@ -199,7 +199,9 @@ Below is the configuration I added to monitor the metric "my_metric" based on th
   - Include the metric value that caused the monitor to trigger and host ip when the Monitor triggers an Alert state.
   - When this monitor sends you an email notification, take a screenshot of the email that it sends you.
 
+In order to create an email notification based off a monitor trigger, I first had to create a monitor message:
 
+![definemetricmessage](https://github.com/donp123/donp123/blob/master/warningmessage.png)
 
 
 ## Collecting APM Data
