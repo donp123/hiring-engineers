@@ -62,6 +62,7 @@ In order to complete this step I first chose to install MySQL onto my VM by runn
  I then had to install the Datadog integration for the MySQL database, which I found here:    https://docs.datadoghq.com/integrations/mysql/
   
 The first step given for the Datadog integration was to create a new database user called datadog:
+
 mysql> CREATE USER 'datadog'@'localhost' IDENTIFIED BY 'password';
   
 I then granted the user proper permissions:
