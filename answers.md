@@ -5,7 +5,7 @@ In order to properly complete the Datadog Sales Engineering Lab I first had to c
 
 From here I ran the following two commands in order to have a fully running virtual machine in Virtual box:
 
-![Hostmap](https://github.com/donp123/donp123/blob/master/vagrantup.png)
+![upcommands](https://github.com/donp123/donp123/blob/master/vagrantup.png)
 
 I then ran the command in order to ssh into the VM from my terminal:
 
@@ -26,15 +26,23 @@ Now that my agent has been installed correctly, I was able to move on to the fol
 
 The following were the tasks given for completion of the Collecting Metrics section of the lab:
 
-### Add tags in the Agent config file and show us a screenshot of your host and its tags on the Host Map page in Datadog.
+### 1.)Add tags in the Agent config file and show us a screenshot of your host and its tags on the Host Map page in Datadog.
 
-  In order to complete this first task I first had to add tags into the agent config file by first running the following command 
-  to 
+  In order to complete this task, I first had to edit the datadog.yaml by running the following command:
+  
+  $ sudo vi /etc/datadog-agent/datadog.yaml
 
+  Once inside the file file I was able to add in tags for my agent:
+  
+ ![tags](https://github.com/donp123/donp123/blob/master/datadogyaml.png)
+  
+  I started off by adding one tag "env:dev" for my agent to make sure it would work. I then saved the  yaml file and restarted the
+  agent: $ sudo service datadog-agent restart
+  
+  Once restarted, I went back into Datadog to check my Host Map:
 
-
-Below is the picture of my hostmap:
 ![Hostmap](https://github.com/donp123/donp123/blob/master/hostmap.png)
+
 
 
 
