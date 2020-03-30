@@ -19,10 +19,19 @@ Once I ran the above command, I then went into Datadog to see my agent properly 
 
 ![System Dash](https://github.com/donp123/donp123/blob/master/pic1_aftersetup.png)
 
-
+Now that my agent has been installed correctly, I was able to move on to the following 'Collecting Metrics' section.
 
 
 ## Collecting Metrics 
+
+The following were the tasks given for completion of the Collecting Metrics section of the lab:
+
+### Add tags in the Agent config file and show us a screenshot of your host and its tags on the Host Map page in Datadog.
+
+  In order to complete this first task I first had to add tags into the agent config file by first running the following command 
+  to 
+
+
 
 Below is the picture of my hostmap:
 ![Hostmap](https://github.com/donp123/donp123/blob/master/hostmap.png)
