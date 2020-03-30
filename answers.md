@@ -154,6 +154,10 @@ Link to Timeboard: https://app.datadoghq.com/dashboard/df6-mrj-ffh/dps-first-das
   - Set the Timeboard's timeframe to the past 5 minutes
   - Take a snapshot of this graph and use the @ notation to send it to yourself.
 
+I was able to change the timeframe of my Timeboard by using the shortcut "ALT +]" until it was five minutes:
+
+![timeboardcut](https://github.com/donp123/donp123/blob/master/timeboardshortcuts.png)
+
 
 ## Monitoring Data
 
