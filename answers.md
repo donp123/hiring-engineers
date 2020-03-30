@@ -58,6 +58,42 @@ The following were the tasks given for completion of the Collecting Metrics sect
   The first step given for the Datadog integration was to create a new database user called datadog:
   mysql> CREATE USER 'datadog'@'localhost' IDENTIFIED BY 'password';
   
+  I then granted the user proper permissions:
+  
+  mysql> GRANT REPLICATION CLIENT ON *.* TO 'datadog'@'localhost' WITH MAX_USER_CONNECTIONS 5;
+  Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+  mysql> GRANT PROCESS ON *.* TO 'datadog'@'localhost';
+  Query OK, 0 rows affected (0.00 sec)
+  
+  
+  I then had to add the proper configuration block to my conf.yaml file to collect the MySQL metrics:
+ 
+   $ vi /etc/datadog-agent/conf.d/mysql.d/conf.yaml
+ 
+  From here I added the following code to the file:
+
+
+  init_config:
+
+  instances:
+  - server: 127.0.0.1
+   user: datadog
+   pass: "<YOUR_CHOSEN_PASSWORD>" # from the CREATE USER step earlier
+   port: "<YOUR_MYSQL_PORT>" # e.g. 3306
+   options:
+      replication: false
+      galera_cluster: true
+      extra_status_metrics: true
+      extra_innodb_metrics: true
+      extra_performance_metrics: true
+      schema_size_metrics: false
+      disable_innodb_metrics: false
+  
+  
+  
+   
+  
   
 
   
