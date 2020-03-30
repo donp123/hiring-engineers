@@ -97,9 +97,21 @@ The following were the tasks given for completion of the Collecting Metrics sect
   
   ![metriccheck](https://github.com/donp123/donp123/blob/master/pythonrand.png)
   
+  
+  I then had to create a check Yaml file that also had the same name has my check Python file:
+  
+  $ sudo vi /etc/datadog-agent/conf.d/my-metric-check.yaml
+  
+  I then added the following to this file as directed by the Datadog doc file (https://docs.datadoghq.com/developers/write_agent_check/?tab=agentv6v7) :
+  
+    instances: [{}]
+    
+   
   From here I restarted my Datadog-agent and tested to see if my custom metric check was working properly:
   
   ![mymetriccheck](https://github.com/donp123/donp123/blob/master/metriccheck.png)
+  
+  
   
 
   
