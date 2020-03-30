@@ -144,6 +144,9 @@ I used the Datadog API using curl in order to create a Timeboard called "DPs fir
 
 ![timeboardapi](https://github.com/donp123/donp123/blob/master/timeboardcode.png)
 
+The following is the Timeboard created by the API:
+
+![timeboardapi](https://github.com/donp123/donp123/blob/master/timeboarddash.png)
 
 
 ## Monitoring Data
