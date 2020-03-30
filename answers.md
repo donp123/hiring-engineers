@@ -239,6 +239,9 @@ And below is the configuration for a shutdown on Saturday and Sunday:
 ![shutdownconfweekend](https://github.com/donp123/donp123/blob/master/weekendshutdown.png)
 
 
+Once I Schedueled the Downtime in Datadog, I recieved an email notification informing me of the schuedeld downtime:
+
+![shutdownconfirmationemail](https://github.com/donp123/donp123/blob/master/emailshutdown.png)
 
 
 
