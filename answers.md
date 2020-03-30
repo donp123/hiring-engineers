@@ -189,9 +189,17 @@ From the left hand navigation I created a new Metric monitor:
 
 Monitors -> New Monitor -> Metric 
 
-Below is the configuration I added t0 monitor the metric "my_metric" based on the criteria assigned above:
+Below is the configuration I added to monitor the metric "my_metric" based on the criteria assigned above:
 
 ![definemetric](https://github.com/donp123/donp123/blob/master/metricmonitorthres1.png)
+
+### 2.) Please configure the monitor’s message so that it will:
+  - Send you an email whenever the monitor triggers.
+  - Create different messages based on whether the monitor is in an Alert, Warning, or No Data state.
+  - Include the metric value that caused the monitor to trigger and host ip when the Monitor triggers an Alert state.
+  - When this monitor sends you an email notification, take a screenshot of the email that it sends you.
+
+
 
 
 ## Collecting APM Data
