@@ -205,7 +205,7 @@ In order to create an email notification based off a monitor trigger, I first ha
 
 Below is the full monitor message:
 
-![definemetricmessagefull](https://github.com/donp123/donp123/blob/master/messagecode.png)
+![definemetricmessagefull](https://github.com/donp123/donp123/blob/master/messagecode.PNG)
 
 Once the Metric Monitor has been fully filled out, I then ran a test to see what the alert would look like for an alert notification:
 
