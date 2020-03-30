@@ -28,37 +28,37 @@ The following were the tasks given for completion of the Collecting Metrics sect
 
 ### 1.) Add tags in the Agent config file and show us a screenshot of your host and its tags on the Host Map page in Datadog.
 
-  In order to complete this task, I first had to edit the datadog.yaml by running the following command:
+In order to complete this task, I first had to edit the datadog.yaml by running the following command:
   
-  $ sudo vi /etc/datadog-agent/datadog.yaml
+$ sudo vi /etc/datadog-agent/datadog.yaml
 
-  Once inside the file file I was able to add in tags for my agent:
+Once inside the file file I was able to add in tags for my agent:
   
  ![tags](https://github.com/donp123/donp123/blob/master/datadogyaml.png)
   
-  I started off by adding one tag "env:dev" for my agent to make sure it would work. I then saved the  yaml file and restarted the
-  agent: $ sudo service datadog-agent restart
+I started off by adding one tag "env:dev" for my agent to make sure it would work. I then saved the  yaml file and restarted the
+agent: $ sudo service datadog-agent restart
   
-  Once restarted, I went back into Datadog to check my Host Map:
+Once restarted, I went back into Datadog to check my Host Map:
 
 ![Hostmap](https://github.com/donp123/donp123/blob/master/hostmap.png)
 
-  I then saw that my tag has been succesfully added. At this point I went back and added a second tag "tier:webserver".
+I then saw that my tag has been succesfully added. At this point I went back and added a second tag "tier:webserver".
   
 ### 2.) Install a database on your machine (MongoDB, MySQL, or PostgreSQL) and then install the respective Datadog integration for that database.
 
-  In order to complete this step I first chose to install MySQL onto my VM by running the following commands:
+In order to complete this step I first chose to install MySQL onto my VM by running the following commands:
     $ sudo apt update
     $ sudo apt install mysql-server
     $ sudo mysql_secure_installation
     
     
-  I then had to install the Datadog integration for the MySQL database, which I found here:    https://docs.datadoghq.com/integrations/mysql/
+ I then had to install the Datadog integration for the MySQL database, which I found here:    https://docs.datadoghq.com/integrations/mysql/
   
-  The first step given for the Datadog integration was to create a new database user called datadog:
-  mysql> CREATE USER 'datadog'@'localhost' IDENTIFIED BY 'password';
+The first step given for the Datadog integration was to create a new database user called datadog:
+mysql> CREATE USER 'datadog'@'localhost' IDENTIFIED BY 'password';
   
-  I then granted the user proper permissions:
+I then granted the user proper permissions:
   
   mysql> GRANT REPLICATION CLIENT ON *.* TO 'datadog'@'localhost' WITH MAX_USER_CONNECTIONS 5;
   Query OK, 0 rows affected, 1 warning (0.00 sec)
@@ -67,47 +67,47 @@ The following were the tasks given for completion of the Collecting Metrics sect
   Query OK, 0 rows affected (0.00 sec)
   
   
-  I then had to add the proper configuration block to my conf.yaml file to collect the MySQL metrics:
+I then had to add the proper configuration block to my conf.yaml file to collect the MySQL metrics:
  
    $ vi /etc/datadog-agent/conf.d/mysql.d/conf.yaml
  
-  From here I added the following code to the file:
+From here I added the following code to the file:
   
   ![yaml](https://github.com/donp123/donp123/blob/master/confyam.png)
   
-  I then restarted the Datadog agent:
+I then restarted the Datadog agent:
   
   $ systemct1 restart datadog-agent
   
   
-  I now went into the Datadog UI and saw that a new dashboard was added called "MySQL Overview":
+I now went into the Datadog UI and saw that a new dashboard was added called "MySQL Overview":
   
   ![mysqldash](https://github.com/donp123/donp123/blob/master/mysql.png)
   
-  This dashbaord is showing that my agent is correctly setup and is now collecting from the MySQL databse I installed.
+This dashbaord is showing that my agent is correctly setup and is now collecting from the MySQL databse I installed.
   
 ### 3.) Create a custom Agent check that submits a metric named my_metric with a random value between 0 and 1000.
 
-  In order to complete this task, I first had to create a metric check python file. I called this file
-  my_metric_checks.py:
+In order to complete this task, I first had to create a metric check python file. I called this file
+my_metric_checks.py:
   
   $ sudo vi /etc/datadog-agent/checks.d/my-metric-check.py
    
-  I then added the following code into the python file:
+I then added the following code into the python file:
   
   ![metriccheck](https://github.com/donp123/donp123/blob/master/pythonrand.png)
   
   
-  I then had to create a check Yaml file that also had the same name has my check Python file:
+I then had to create a check Yaml file that also had the same name has my check Python file:
   
   $ sudo vi /etc/datadog-agent/conf.d/my-metric-check.yaml
   
-  I then added the following to this file as directed by the Datadog doc file (https://docs.datadoghq.com/developers/write_agent_check/?tab=agentv6v7) :
+I then added the following to this file as directed by the Datadog doc file (https://docs.datadoghq.com/developers/write_agent_check/?tab=agentv6v7) :
   
     instances: [{}]
     
    
-  From here I restarted my Datadog-agent and tested to see if my custom metric check was working properly:
+From here I restarted my Datadog-agent and tested to see if my custom metric check was working properly:
   
   ![mymetriccheck](https://github.com/donp123/donp123/blob/master/metriccheck.png)
   
