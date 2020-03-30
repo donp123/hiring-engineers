@@ -171,6 +171,9 @@ The following is the second email I sent myself:
 ![timeboardemail2](https://github.com/donp123/donp123/blob/master/secondtimeboardemail.png)
 
 
+### Bonus Question: What is the Anomaly graph displaying?
+
+The Anomaly graph is showing outliers in red, while the normal expected performance behavior is in the grey shaded area. This essentially using algorithms to predict based on historical data what should be considered normal behavior, and allows a user to see what is 3 points above the standard deviation.
 
 
 ## Monitoring Data
