@@ -186,7 +186,7 @@ The following is the second email I sent myself:
 
 ### Bonus Question: What is the Anomaly graph displaying?
 
-The Anomaly graph is shows outliers in red, and normal expected performance behavior in a grey shaded area. This uses Datadog algorithms to predict and determine what is considered normal behavior based on historical data , and allows a user to see what is 3 points above the standard deviation.
+The Anomaly graph shows any performance outside of normal behavior in red, and normal expected performance behavior in a grey shaded area. This uses Datadog algorithms to predict and determine what is considered normal behavior based on historical data , and allows a user to see what is 3 points above the standard deviation.
 
 
 ## Monitoring Data
