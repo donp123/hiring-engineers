@@ -158,6 +158,15 @@ I was able to change the timeframe of my Timeboard by using the shortcut "ALT +]
 
 ![timeboardcut](https://github.com/donp123/donp123/blob/master/timeboardshortcuts.png)
 
+From this new timeframe I took a snapshot of the "MySQL Anomaly performance (CPU)" graph and sent an email to myself:
+
+![timeboardsnap](https://github.com/donp123/donp123/blob/master/snapshottime.png)
+
+The following is the email I recieved from Datadog:
+
+![timeboardemail](https://github.com/donp123/donp123/blob/master/emailtimeboard.png)
+
+
 
 ## Monitoring Data
 
