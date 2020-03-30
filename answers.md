@@ -140,7 +140,7 @@ The following were the tasks given for completion of the Visualizing Data sectio
   - Any metric from the Integration on your Database with the anomaly function applied.
   - Your custom metric with the rollup function applied to sum up all the points for the past hour into one bucket
 
-I used the Datadog API using curl in order to create a Timeboard called "DPs first Dashboard":
+I used the Datadog API using curl in order to create a Timeboard called "DPs first Dashboard" with three graphs. The first graph "My_Metric" displays the custom metric I created scoped over my vagrant host. The second graph created displays "MySQL Anomaly performance (CPU)" to show any anomalies in performance for the MySQL database I installed. The third graph being created by the API is to show my metric rolled up and summed over the last hour. The following is the code used to create my timeboard:
 
 ![timeboardapi](https://github.com/donp123/donp123/blob/master/timeboardcode.png)
 
