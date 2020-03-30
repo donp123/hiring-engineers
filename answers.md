@@ -203,6 +203,12 @@ In order to create an email notification based off a monitor trigger, I first ha
 
 ![definemetricmessage](https://github.com/donp123/donp123/blob/master/warningmessage.png)
 
+Below is the full monitor message:
+
+![definemetricmessagefull](https://github.com/donp123/donp123/blob/master/messagecode.png)
+
+
+
 
 ## Collecting APM Data
 Given the following Flask app (or any Python/Ruby/Go app of your choice) instrument this using Datadog’s APM solution:
