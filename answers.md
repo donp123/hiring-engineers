@@ -84,6 +84,8 @@ The following were the tasks given for completion of the Collecting Metrics sect
   
   ![mysqldash](https://github.com/donp123/donp123/blob/master/mysql.png)
   
+  This dashbaord is showing that my agent is correctly setup and is now collecting from the MySQL databse I installed.
+  
   
    
   
