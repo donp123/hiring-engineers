@@ -41,7 +41,7 @@ Once inside the file file I was able to add in tags for my agent:
 I started off by adding one tag "env:dev" for my agent to make sure it would work. I then saved the yaml file and restarted the
 agent: 
 
-  $ sudo service datadog-agent restart
+  -$ sudo service datadog-agent restart
   
 Once restarted, I went back into Datadog to check my Host Map:
 
@@ -54,9 +54,9 @@ I then saw that my tag has been succesfully added. At this point I went back and
 ### 2.) Install a database on your machine (MongoDB, MySQL, or PostgreSQL) and then install the respective Datadog integration for that database.
 
 In order to complete this step I first chose to install MySQL onto my VM by running the following commands:
-    $ sudo apt update
-    $ sudo apt install mysql-server
-    $ sudo mysql_secure_installation
+    -$ sudo apt update
+    -$ sudo apt install mysql-server
+   - $ sudo mysql_secure_installation
     
     
  I then had to install the Datadog integration for the MySQL database, which I found here:    https://docs.datadoghq.com/integrations/mysql/
