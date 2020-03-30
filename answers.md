@@ -185,7 +185,7 @@ The following is the second email I sent myself:
 
 ### Bonus Question: What is the Anomaly graph displaying?
 
-The Anomaly graph is showing outliers in red, while the normal expected performance behavior is in the grey shaded area. This essentially using algorithms to predict based on historical data what should be considered normal behavior, and allows a user to see what is 3 points above the standard deviation.
+The Anomaly graph is shows outliers in red, and normal expected performance behavior in a grey shaded area. This uses Datadog algorithms to predict and determine what is considered normal behavior based on historical data , and allows a user to see what is 3 points above the standard deviation.
 
 
 ## Monitoring Data
@@ -197,7 +197,7 @@ The following were the tasks given for completion of the Monitoring Data section
   - Alerting threshold of 800
   - And also ensure that it will notify you if there is No Data for this query over the past 10m.
   
-From the left hand navigation I created a new Metric monitor:
+From the left hand navigation I created a new Metric Monitor:
 
 Monitors -> New Monitor -> Metric 
 
@@ -227,7 +227,7 @@ Below is the test email alert notification I recieved:
 
 ![metricalerttest](https://github.com/donp123/donp123/blob/master/testresultemail.png)
 
-After I was satisifed with the test results, I clicked "save" and my Metric Monitor was live. Below is the first live email warning notifcation when "my_metric" was greater than 500 on average during the last 5 minutes:
+After I was satisifed with the test result, I clicked "save" and my Metric Monitor was live. Below is the first live email warning notifcation when "my_metric" was greater than 500 on average during the last 5 minutes:
 
 ![metricalertlive](https://github.com/donp123/donp123/blob/master/liveemailtest.png)
 
@@ -237,16 +237,16 @@ After I was satisifed with the test results, I clicked "save" and my Metric Moni
   - Make sure that your email is notified when you schedule the downtime and take a screenshot of that notification.
 
 
-In order to Schedule Down time for a monitor:
+In order to Schedule Downtime for a monitor:
 
 Monitors->Manage Downtime->Schedule Downtime
 
-Below is the Schedueld Downtime configuration I used for my monitor for Monday-Friday 7pm to 9am:
+Below is the Schedueld Downtime configuration I used for my monitor during Monday-Friday 7pm to 9am:
 
 ![shutdownconf](https://github.com/donp123/donp123/blob/master/shutdown1.PNG)
 
 
-And below is the configuration for a shutdown on Saturday and Sunday:
+And below is the configuration for Downtime on Saturday and Sunday:
 
 ![shutdownconfweekend](https://github.com/donp123/donp123/blob/master/weekendshutdown.png)
 
@@ -275,7 +275,7 @@ After installing pip, ddtrace, and flask I then created a flask.py file with the
 
 ![ddtrace](https://github.com/donp123/donp123/blob/master/flasky.png)
 
-I then ran the curl command below to test the application 
+I then ran the curl command below to test the application: 
 
 ![pip1](https://github.com/donp123/donp123/blob/master/testcurlapm.png)
 
@@ -298,7 +298,7 @@ Datadog has been used in a lot of creative ways in the past. We’ve written som
 
 Is there anything creative you would use Datadog for?
 
-I believe an interesting way that I could personally use Datadog for is to monitor the consumption of pre-made food I ingest on a weekly basis. I try prepair my meals on Sunday in big batches so I do not have to cook throughout the week for lunch and dinner. I have noticed that some weeks I run out of food, while other weeks I have excess food (I am fairly consistent on how much food I buy each week and I hate wasting food!) The goal here would be able to correlate my workouts/daily behavior with food consumtion to optomize the food preperation process. This would allow me to predict how much food I need for an upcoming week based on planned workout/daily activities. I figured this could be achieveable by monitoring the weight of my refrigerator shelf and importing this into Datadog for monitoring, as well as cross referencing this data with my workouts/daily activities. I could create thresholds and alerts to let me know if I need to buy more food during the week as well if I update my workout routine. 
+I believe an interesting way that I could use Datadog for is to monitor the consumption of pre-made food I ingest on a weekly basis. I try prepair my meals on Sunday in big batches so I do not have to cook throughout the week for lunch and dinner. I have noticed that some weeks I run out of food, while other weeks I have excess(I am fairly consistent on how much food I buy each week and I hate wasting food!) The goal here would be able to create a correlatation with my workouts/daily behavior and food consumtion, in order to optomize my food preperation process. This would allow me to predict how much food I need for an upcoming week based on planned workout/daily activities. I figured this could be achieveable by monitoring the weight of my refrigerator shelf and importing this into Datadog for monitoring, as well as cross referencing this data with my workouts/daily activities. I could create thresholds and alerts to let me know if I need to buy more food during the week as well if I update my workout routine. 
 
 
 
