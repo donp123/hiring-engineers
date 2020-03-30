@@ -275,12 +275,21 @@ After running the curl command above, a new service is present in my APM section
 Dashboard link: https://app.datadoghq.com/apm/service/flask/flask.request?end=1585342678914&env=dev&maxPercentile=100&paused=false&start=1585339078914
 
 
+### Bonus Question: What is the difference between a Service and a Resource?
 
+After reading: https://docs.datadoghq.com/tracing/visualization/#services
 
-
-
+Services act as building blocks for microservice architectures, such as a MySQL database or a group of URL endpoints, while Resources are the actions that take place within a service such as a background job or query of the application.
 
 ## Final Question
+Datadog has been used in a lot of creative ways in the past. We’ve written some blog posts about using Datadog to monitor the NYC Subway System, Pokemon Go, and even office restroom availability!
+
+Is there anything creative you would use Datadog for
+
+
+
+
+
 
 
 
