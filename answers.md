@@ -72,23 +72,8 @@ The following were the tasks given for completion of the Collecting Metrics sect
    $ vi /etc/datadog-agent/conf.d/mysql.d/conf.yaml
  
   From here I added the following code to the file:
-
-
-  init_config:
-
-  instances:
-  - server: 127.0.0.1
-   user: datadog
-   pass: "<YOUR_CHOSEN_PASSWORD>" # from the CREATE USER step earlier
-   port: "<YOUR_MYSQL_PORT>" # e.g. 3306
-   options:
-      replication: false
-      galera_cluster: true
-      extra_status_metrics: true
-      extra_innodb_metrics: true
-      extra_performance_metrics: true
-      schema_size_metrics: false
-      disable_innodb_metrics: false
+  
+  ![yaml](https://github.com/donp123/donp123/blob/master/confyam.png)
   
   
   
