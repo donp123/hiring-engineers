@@ -224,9 +224,20 @@ After I was satisifed with the test results, I clicked "save" and my Metric Moni
   - And one that silences it all day on Sat-Sun.
   - Make sure that your email is notified when you schedule the downtime and take a screenshot of that notification.
 
+
 In order to Schedule Down time for a monitor:
 
 Monitors->Manage Downtime->Schedule Downtime
+
+Below is the Schedueld Downtime configuration I used for my monitor for Monday-Friday 7pm to 9am:
+
+![shutdownconf](https://github.com/donp123/donp123/blob/master/shutdown1.png)
+
+
+And below is the configuration for a shutdown on Saturday and Sunday:
+
+![shutdownconfweekend](https://github.com/donp123/donp123/blob/master/weekendshutdown.png)
+
 
 
 
