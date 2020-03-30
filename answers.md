@@ -178,6 +178,15 @@ The Anomaly graph is showing outliers in red, while the normal expected performa
 
 ## Monitoring Data
 
+The following were the tasks given for completion of the Monitoring Data section of the lab:
+
+### 1.) Create a new Metric Monitor that watches the average of your custom metric (my_metric) and will alert if it’s above the following values over the past 5 minutes:
+  - Warning threshold of 500
+  - Alerting threshold of 800
+  - And also ensure that it will notify you if there is No Data for this query over the past 10m.
+  
+
+
 
 ## Collecting APM Data
 Given the following Flask app (or any Python/Ruby/Go app of your choice) instrument this using Datadog’s APM solution:
