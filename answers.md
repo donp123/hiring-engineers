@@ -248,7 +248,28 @@ Once I Schedueled the Downtime in Datadog, I recieved an email notification info
 ## Collecting APM Data
 Given the following Flask app (or any Python/Ruby/Go app of your choice) instrument this using Datadog’s APM solution:
 
-picture of APM code
+![APM](https://github.com/donp123/donp123/blob/master/apmflaskgiven.png)
+
+-Note: Using both ddtrace-run and manually inserting the Middleware has been known to cause issues. Please only use one or the other.
+
+In order to complete this section of the lab I first had to install python pip, and then install "ddtrace". :
+
+![pip](https://github.com/donp123/donp123/blob/master/installpipandddtrace.png)
+
+
+
+
+
+
+test curl
+
+![pip1](https://github.com/donp123/donp123/blob/master/testcurlapm.png)
+
+
+
+
+
+
 
 ## Final Question
 
