@@ -250,20 +250,30 @@ Given the following Flask app (or any Python/Ruby/Go app of your choice) instrum
 
 ![APM](https://github.com/donp123/donp123/blob/master/apmflaskgiven.png)
 
--Note: Using both ddtrace-run and manually inserting the Middleware has been known to cause issues. Please only use one or the other.
 
-In order to complete this section of the lab I first had to install python pip, and then install "ddtrace". :
+In order to complete this section of the lab I first had to install python pip, and then install "ddtrace" using pip:
 
 ![pip](https://github.com/donp123/donp123/blob/master/installpipandddtrace.png)
 
+I also installed flask using pip:
 
-
+  $ sudo pip install flask
+  
+After installing pip, ddtrace, and flask I then created a flask.py file with the given code above to run my flask application. After creating my dpflask.py file I ran the following command to launch the application using Datadog tracing:
 
 
 
 test curl
 
 ![pip1](https://github.com/donp123/donp123/blob/master/testcurlapm.png)
+
+
+
+
+After running the curl command above, a new service is present in my APM section of Data dog and the following dashboard for my flask aplication is visbale:
+
+![flaskdashboard](https://github.com/donp123/donp123/blob/master/flaskapmdashboard.png)
+
 
 
 
