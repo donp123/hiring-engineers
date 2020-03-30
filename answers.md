@@ -1,7 +1,7 @@
 # The following will discuss the steps necessary in order to complete the Datadog Sales Engineering Lab.
 
 ## Prerequisites - Setup the environment
-In order to properly complete the Datadog Sales Engineering Lab I first had to complete the environment setup. I choose to spin up a fresh new linux VM using Vagrant. In order to download and install a VM with Vagrant I followed the instructions provided in the reference section of the Datadog Sales Engineering lab by first downloading VirtualBox, and then downloading the latest version of Vagrant(2.2.7). 
+In order to properly complete the Datadog Sales Engineering Lab I first had to complete the environment setup. I chose to spin up a fresh new linux VM using Vagrant. In order to download and install a VM with Vagrant I followed the instructions provided in the reference section of the Datadog Sales Engineering lab by first downloading VirtualBox, and then downloading the latest version of Vagrant(2.2.7). 
 
 From here I ran the following two commands in order to have a fully running virtual machine in Virtual box:
 
@@ -18,6 +18,8 @@ DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=f622b4c53cca8fc2fd7e0f74c02e302b bash -c "$(
 Once I ran the above command, I then went into Datadog to see my agent properly connected  by looking at my system dashboard:
 
 ![System Dash](https://github.com/donp123/donp123/blob/master/pic1_aftersetup.png)
+
+Dashboard link: https://app.datadoghq.com/dash/integration/2/system---disk-io?from_ts=1585583453054&to_ts=1585587053054&live=true&tile_size=m
 
 Now that my agent has been installed correctly, I was able to move on to the following 'Collecting Metrics' section.
 
@@ -36,12 +38,16 @@ Once inside the file file I was able to add in tags for my agent:
   
  ![tags](https://github.com/donp123/donp123/blob/master/datadogyaml.png)
   
-I started off by adding one tag "env:dev" for my agent to make sure it would work. I then saved the  yaml file and restarted the
-agent: $ sudo service datadog-agent restart
+I started off by adding one tag "env:dev" for my agent to make sure it would work. I then saved the yaml file and restarted the
+agent: 
+
+  $ sudo service datadog-agent restart
   
 Once restarted, I went back into Datadog to check my Host Map:
 
 ![Hostmap](https://github.com/donp123/donp123/blob/master/hostmap.png)
+
+Hostmap Link: https://app.datadoghq.com/infrastructure/map?fillby=avg%3Acpuutilization&sizeby=avg%3Anometric&groupby=availability-zone&nameby=name&nometrichosts=false&tvMode=false&nogrouphosts=true&palette=green_to_orange&paletteflip=false&node_type=host
 
 I then saw that my tag has been succesfully added. At this point I went back and added a second tag "tier:webserver".
   
@@ -84,12 +90,14 @@ I now went into the Datadog UI and saw that a new dashboard was added called "My
   
   ![mysqldash](https://github.com/donp123/donp123/blob/master/mysql.png)
   
+  MySQL Dashboard Link: https://app.datadoghq.com/dash/integration/12/mysql---overview?from_ts=1585583599518&to_ts=1585587199518&live=true&tile_size=m
+  
 This dashbaord is showing that my agent is correctly setup and is now collecting from the MySQL databse I installed.
   
 ### 3.) Create a custom Agent check that submits a metric named my_metric with a random value between 0 and 1000.
 
 In order to complete this task, I first had to create a metric check python file. I called this file
-my_metric_checks.py:
+my-metric-check.py:
   
   $ sudo vi /etc/datadog-agent/checks.d/my-metric-check.py
    
@@ -107,23 +115,25 @@ I then added the following to this file as directed by the Datadog doc file (htt
     instances: [{}]
     
    
-From here I restarted my Datadog-agent and tested to see if my custom metric check was working properly:
+From here I restarted my Datadog-agent and tested to see if my custom metric check was working properly with the following command:
   
   ![mymetriccheck](https://github.com/donp123/donp123/blob/master/metriccheck.png)
   
   
 ### 4.) Change your check's collection interval so that it only submits the metric once every 45 seconds
 
-In order to change my checks collection interval, I first went into the configuration yaml file I created in the   above step and changed the min collectio ninterval to 45. The below figure is taken from  (https://docs.datadoghq.com/developers/write_agent_check/?tab=agentv6v7), where I changed the interval from 30 to  45.
+In order to change my checks collection interval, I first went into the configuration yaml file I created in the above step and changed the min collection interval to 45. The below figure is taken from  (https://docs.datadoghq.com/developers/write_agent_check/?tab=agentv6v7), where I changed the interval from 30 to 45.
 
   
 ![intervalchange](https://github.com/donp123/donp123/blob/master/collectionintchangedoc.png)
 
 ![intervalchange2](https://github.com/donp123/donp123/blob/master/collectionchangecode.png)
 
-From here I restarted the Datadog agent, and then went into Datadog to find my custome metric on the "Metric  Explorer":
+From here I restarted the Datadog agent, and after went into Datadog to find my custome metric on the "Metric  Explorer":
 
 ![mymetricdash](https://github.com/donp123/donp123/blob/master/metricsexplorerinterval.png)
+
+Metric Explorer Link: https://app.datadoghq.com/metric/explorer?from_ts=1585583750533&to_ts=1585587350533&live=true&page=0&is_auto=false&tile_size=m&exp_metric=my_metric&exp_agg=avg&exp_row_type=metric
 
 The dashboard confirmed that the colection interval for my metric has been changed to 45 seconds.
 
