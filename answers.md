@@ -43,6 +43,25 @@ The following were the tasks given for completion of the Collecting Metrics sect
 
 ![Hostmap](https://github.com/donp123/donp123/blob/master/hostmap.png)
 
+  I then saw that my tag has been succesfully added. At this point I went back and added a second tag "tier:webserver".
+  
+### 2.)Install a database on your machine (MongoDB, MySQL, or PostgreSQL) and then install the respective Datadog integration for that database.
+
+  In order to complete this step I first chose to install MySQL onto my VM by running the following commands:
+    $ sudo apt update
+    $ sudo apt install mysql-server
+    $ sudo mysql_secure_installation
+    
+    
+  I then had to install the Datadog integration for the MySQL database, which I found here:    https://docs.datadoghq.com/integrations/mysql/
+  
+  The first step given for the Datadog integration was to create a new database user called datadog:
+  mysql> CREATE USER 'datadog'@'localhost' IDENTIFIED BY 'password';
+  
+  
+
+  
+
 
 
 
