@@ -86,9 +86,20 @@ The following were the tasks given for completion of the Collecting Metrics sect
   
   This dashbaord is showing that my agent is correctly setup and is now collecting from the MySQL databse I installed.
   
+### 3.)Create a custom Agent check that submits a metric named my_metric with a random value between 0 and 1000.
+
+  In order to complete this task, I first had to create a metric check python file. I called this file
+  my_metric_checks.py:
   
+  $ sudo vi /etc/datadog-agent/checks.d/my-metric-check.py
    
+  I then added the following code into the python file:
   
+  ![metriccheck](https://github.com/donp123/donp123/blob/master/pythonrand.png)
+  
+  From here I restarted my Datadog-agent and tested to see if my custom metric check was working properly:
+  
+  ![mymetriccheck](https://github.com/donp123/donp123/blob/master/metriccheck.png)
   
 
   
