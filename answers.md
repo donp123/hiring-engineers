@@ -114,10 +114,12 @@ The following were the tasks given for completion of the Collecting Metrics sect
   
 ### 3.)Change your check's collection interval so that it only submits the metric once every 45 seconds
 
-  
+  In order to change my checks collection interval, I first went into the configuration yaml file I created in the   above step and changed the min collectio ninterval to 45. The below figure is taken from  (https://docs.datadoghq.com/developers/write_agent_check/?tab=agentv6v7), where I changed the interval from 30 to   45.
 
   
 ![intervalchange](https://github.com/donp123/donp123/blob/master/collectionintchangedoc.png)
+
+![intervalchange2](https://github.com/donp123/donp123/blob/master/collectionchangecode.png)
 
 
 
