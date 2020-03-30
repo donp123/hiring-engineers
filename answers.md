@@ -148,6 +148,12 @@ The following is the Timeboard created by the API:
 
 ![timeboardapi](https://github.com/donp123/donp123/blob/master/timeboarddash.png)
 
+Link to Timeboard: https://app.datadoghq.com/dashboard/df6-mrj-ffh/dps-first-dashboard?from_ts=1585248711534&to_ts=1585252311534&live=true&tile_size=m
+
+### 2.) Once this is created, access the Dashboard from your Dashboard List in the UI:
+  - Set the Timeboard's timeframe to the past 5 minutes
+  - Take a snapshot of this graph and use the @ notation to send it to yourself.
+
 
 ## Monitoring Data
 
