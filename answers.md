@@ -185,7 +185,13 @@ The following were the tasks given for completion of the Monitoring Data section
   - Alerting threshold of 800
   - And also ensure that it will notify you if there is No Data for this query over the past 10m.
   
-From the left hand navigation, 
+From the left hand navigation I created a new Metric monitor:
+
+Monitors -> New Monitor -> Metric 
+
+Below is the configuration I added t0 monitor the metric "my_metric" based on the criteria assigned above:
+
+![definemetric](https://github.com/donp123/donp123/blob/master/metricmonitorthres1.png)
 
 
 ## Collecting APM Data
