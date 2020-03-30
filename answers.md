@@ -26,7 +26,7 @@ Now that my agent has been installed correctly, I was able to move on to the fol
 
 The following were the tasks given for completion of the Collecting Metrics section of the lab:
 
-### 1.)Add tags in the Agent config file and show us a screenshot of your host and its tags on the Host Map page in Datadog.
+### 1.) Add tags in the Agent config file and show us a screenshot of your host and its tags on the Host Map page in Datadog.
 
   In order to complete this task, I first had to edit the datadog.yaml by running the following command:
   
@@ -45,7 +45,7 @@ The following were the tasks given for completion of the Collecting Metrics sect
 
   I then saw that my tag has been succesfully added. At this point I went back and added a second tag "tier:webserver".
   
-### 2.)Install a database on your machine (MongoDB, MySQL, or PostgreSQL) and then install the respective Datadog integration for that database.
+### 2.) Install a database on your machine (MongoDB, MySQL, or PostgreSQL) and then install the respective Datadog integration for that database.
 
   In order to complete this step I first chose to install MySQL onto my VM by running the following commands:
     $ sudo apt update
@@ -86,7 +86,7 @@ The following were the tasks given for completion of the Collecting Metrics sect
   
   This dashbaord is showing that my agent is correctly setup and is now collecting from the MySQL databse I installed.
   
-### 3.)Create a custom Agent check that submits a metric named my_metric with a random value between 0 and 1000.
+### 3.) Create a custom Agent check that submits a metric named my_metric with a random value between 0 and 1000.
 
   In order to complete this task, I first had to create a metric check python file. I called this file
   my_metric_checks.py:
@@ -112,15 +112,18 @@ The following were the tasks given for completion of the Collecting Metrics sect
   ![mymetriccheck](https://github.com/donp123/donp123/blob/master/metriccheck.png)
   
   
-### 3.)Change your check's collection interval so that it only submits the metric once every 45 seconds
+### 3.) Change your check's collection interval so that it only submits the metric once every 45 seconds
 
-  In order to change my checks collection interval, I first went into the configuration yaml file I created in the   above step and changed the min collectio ninterval to 45. The below figure is taken from  (https://docs.datadoghq.com/developers/write_agent_check/?tab=agentv6v7), where I changed the interval from 30 to   45.
+In order to change my checks collection interval, I first went into the configuration yaml file I created in the   above step and changed the min collectio ninterval to 45. The below figure is taken from  (https://docs.datadoghq.com/developers/write_agent_check/?tab=agentv6v7), where I changed the interval from 30 to  45.
 
   
 ![intervalchange](https://github.com/donp123/donp123/blob/master/collectionintchangedoc.png)
 
 ![intervalchange2](https://github.com/donp123/donp123/blob/master/collectionchangecode.png)
 
+From here I restarted the Datadog agent, and then went into Datadog to find my custome metric on the "Metric  Explorer":
+
+![mymetricdash](https://github.com/donp123/donp123/blob/master/metricsexplorerinterval.png)
 
 
 ## Visualizing Data
