@@ -231,7 +231,7 @@ Monitors->Manage Downtime->Schedule Downtime
 
 Below is the Schedueld Downtime configuration I used for my monitor for Monday-Friday 7pm to 9am:
 
-![shutdownconf](https://github.com/donp123/donp123/blob/master/shutdown1.png)
+![shutdownconf](https://github.com/donp123/donp123/blob/master/shutdown1.PNG)
 
 
 And below is the configuration for a shutdown on Saturday and Sunday:
